@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import asyncHandler from "../utils/asyncHandler";
 import createHttpError from "http-errors";
-
 const register = asyncHandler(async(req:Request,res:Response,next:NextFunction)=>{
   try {
     res.status(200).json({
