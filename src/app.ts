@@ -2,6 +2,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import express from "express";
 import { config } from "./config/config";
+import router from "./router/user.router";
 const app = express();
 // cors configuration
 app.use(cors({
@@ -17,4 +18,6 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 // use public as a local storage
 app.use(express.static("public"));
+// routes
+app.use("/api/v1",router);
 export default app;
