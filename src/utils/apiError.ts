@@ -1,10 +1,10 @@
 export class apiError extends Error {
   constructor(
-    statusCode:number,
-    message:string,
-    data:null,
-    error:any,
-    stack:any
+    statusCode: number,
+    message: string,
+    data: null,
+    error: any,
+    stack: any
   ) {
     super(message);
     statusCode = statusCode;
@@ -14,6 +14,6 @@ export class apiError extends Error {
     if (stack) {
       stack = stack;
     }
-    Error.captureStackTrace(this,this.constructor)
+    Error.captureStackTrace(this, this.constructor);
   }
 }
